@@ -15,6 +15,11 @@ const config = defineConfig({
     process.env.WORKERS_CI_BRANCH! || // Cloudflare Workers Builds branch env
     process.env.HEAD!, // Netlify branch env
   token: process.env.TINA_TOKEN!,
+  tinaioConfig: {
+    contentApiUrlOverride: "https://berman-josh-v2-content.tinajs.dev",
+    identityApiUrlOverride: "https://berman-josh-v2-identity.tinajs.dev",
+    frontendUrlOverride: "http://localhost:3002",
+  },
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {
